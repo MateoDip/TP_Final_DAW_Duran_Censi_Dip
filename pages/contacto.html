@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto - Memotest Mundial 2026</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;700&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+    <header class="encabezado">
+        <div class="encabezado__marca">
+            <h1 class="encabezado__titulo">Memotest Mundial 2026</h1>
+            <span class="encabezado__subtitulo">Banderas de la copa</span>
+        </div>
+        <nav class="navegacion" aria-label="Navegacion principal">
+            <a class="navegacion__enlace" href="../index.html">Juego</a>
+            <a class="navegacion__enlace" href="contacto.html">Contacto</a>
+        </nav>
+    </header>
+
+    <main class="contenido-principal">
+        <section aria-labelledby="titulo-contacto">
+            <h2 class="visualmente-oculto" id="titulo-contacto">Formulario de contacto</h2>
+            <form class="formulario-contacto" id="formulario-contacto" novalidate>
+                <div class="formulario-contacto__campo">
+                    <label class="panel-inicio__etiqueta" for="input-nombre-contacto">Nombre</label>
+                    <input class="panel-inicio__input" type="text" id="input-nombre-contacto" name="nombre" placeholder="Tu nombre">
+                </div>
+                <div class="formulario-contacto__campo">
+                    <label class="panel-inicio__etiqueta" for="input-email-contacto">Correo electronico</label>
+                    <input class="panel-inicio__input" type="email" id="input-email-contacto" name="email" placeholder="tu@correo.com">
+                </div>
+                <div class="formulario-contacto__campo">
+                    <label class="panel-inicio__etiqueta" for="input-mensaje-contacto">Mensaje</label>
+                    <textarea class="formulario-contacto__textarea" id="input-mensaje-contacto" name="mensaje" placeholder="Escribi tu mensaje"></textarea>
+                </div>
+                <p class="mensaje-error" id="mensaje-error-contacto" role="alert"></p>
+                <p class="formulario-contacto__confirmacion oculto" id="mensaje-confirmacion-contacto">Se abrio tu cliente de correo para enviar el mensaje.</p>
+                <button class="boton-principal" type="submit">Enviar mensaje</button>
+            </form>
+        </section>
+    </main>
+
+    <footer class="pie-pagina">
+        <p>
+            <a class="pie-pagina__enlace" href="https://github.com/MateoDip/memotest-mundial-2026" target="_blank" rel="noopener noreferrer">Repositorio en Github</a>
+            &middot;
+            <a class="pie-pagina__enlace" href="https://MateoDip.github.io/memotest-mundial-2026/" target="_blank" rel="noopener noreferrer">Version publicada</a>
+        </p>
+    </footer>
+
+    <script src="../js/validations.js"></script>
+    <script src="../js/contacto.js"></script>
+</body>
+</html>
