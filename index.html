@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Memotest Mundial 2026 - Banderas</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;700&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <header class="encabezado">
+        <div class="encabezado__marca">
+            <h1 class="encabezado__titulo">Memotest Mundial 2026</h1>
+            <span class="encabezado__subtitulo">Banderas de la copa</span>
+        </div>
+        <nav class="navegacion" aria-label="Navegacion principal">
+            <a class="navegacion__enlace" href="index.html">Juego</a>
+            <a class="navegacion__enlace" href="pages/contacto.html">Contacto</a>
+            <button class="navegacion__enlace" id="boton-alternar-tema" type="button">Modo claro</button>
+            <button class="navegacion__enlace" id="boton-alternar-sonido" type="button">Sonido: activado</button>
+        </nav>
+    </header>
+
+    <main class="contenido-principal">
+        <section id="pantalla-inicio" aria-labelledby="titulo-inicio">
+            <h2 class="visualmente-oculto" id="titulo-inicio">Configurar partida</h2>
+            <form class="panel-inicio" id="formulario-inicio" novalidate>
+                <div class="panel-inicio__campo">
+                    <label class="panel-inicio__etiqueta" for="input-nombre-jugador">Nombre del jugador</label>
+                    <input class="panel-inicio__input" type="text" id="input-nombre-jugador" name="nombreJugador" placeholder="Ingresa tu nombre" minlength="3" required>
+                </div>
+                <div class="panel-inicio__campo">
+                    <span class="panel-inicio__etiqueta">Nivel de dificultad</span>
+                    <div class="panel-inicio__niveles" role="group" aria-label="Seleccionar nivel de dificultad">
+                        <button class="boton-nivel" type="button" data-nivel="facil">Facil</button>
+                        <button class="boton-nivel" type="button" data-nivel="medio">Medio</button>
+                        <button class="boton-nivel" type="button" data-nivel="dificil">Dificil</button>
+                    </div>
+                </div>
+                <p class="mensaje-error" id="mensaje-error-inicio" role="alert"></p>
+                <button class="boton-principal" type="submit">Comenzar partida</button>
+            </form>
+        </section>
+
+        <section class="oculto" id="pantalla-juego" aria-labelledby="titulo-juego">
+            <h2 class="visualmente-oculto" id="titulo-juego">Partida en curso</h2>
+            <div class="marcador">
+                <div class="marcador__dato">
+                    <span class="marcador__valor" id="nombre-jugador-actual">-</span>
+                    <span class="marcador__etiqueta">Jugador</span>
+                </div>
+                <div class="marcador__dato">
+                    <span class="marcador__valor" id="marcador-intentos">0</span>
+                    <span class="marcador__etiqueta">Intentos</span>
+                </div>
+                <div class="marcador__dato">
+                    <span class="marcador__valor" id="marcador-errores">0</span>
+                    <span class="marcador__etiqueta">Errores</span>
+                </div>
+                <div class="marcador__dato">
+                    <span class="marcador__valor" id="marcador-pares">0 / 0</span>
+                    <span class="marcador__etiqueta">Pares</span>
+                </div>
+                <div class="marcador__dato">
+                    <span class="marcador__valor" id="marcador-tiempo">00:00</span>
+                    <span class="marcador__etiqueta">Tiempo</span>
+                </div>
+                <div class="marcador__dato">
+                    <span class="marcador__valor" id="marcador-puntaje">0</span>
+                    <span class="marcador__etiqueta">Puntaje</span>
+                </div>
+                <div class="marcador__acciones">
+                    <button class="boton-secundario" id="boton-abrir-ranking" type="button">Ver ranking</button>
+                    <button class="boton-secundario" id="boton-reiniciar" type="button">Reiniciar</button>
+                    <button class="boton-secundario" id="boton-volver-inicio" type="button">Salir</button>
+                </div>
+            </div>
+
+            <div class="tablero" id="tablero-juego" role="group" aria-label="Tablero de cartas"></div>
+        </section>
+    </main>
+
+    <footer class="pie-pagina">
+        <p>
+            <a class="pie-pagina__enlace" href="https://github.com/mateo-usuario/memotest-mundial-2026" target="_blank" rel="noopener noreferrer">Repositorio en Github</a>
+            &middot;
+            <a class="pie-pagina__enlace" href="https://mateo-usuario.github.io/memotest-mundial-2026/" target="_blank" rel="noopener noreferrer">Version publicada</a>
+        </p>
+    </footer>
+
+    <div class="capa-modal" id="modal-resumen-final">
+        <div class="modal" role="dialog" aria-labelledby="titulo-modal-resumen">
+            <h2 class="modal__titulo" id="titulo-modal-resumen">Partida finalizada</h2>
+            <div class="modal__lista" id="resumen-final-lista"></div>
+            <div class="modal__acciones">
+                <button class="boton-secundario" id="boton-ir-inicio-desde-resumen" type="button">Salir</button>
+                <button class="boton-principal" id="boton-jugar-nuevamente" type="button">Jugar de nuevo</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="capa-modal" id="modal-ranking">
+        <div class="modal" role="dialog" aria-labelledby="titulo-modal-ranking">
+            <h2 class="modal__titulo" id="titulo-modal-ranking">Ranking de partidas</h2>
+            <div class="panel-inicio__campo">
+                <label class="panel-inicio__etiqueta" for="selector-orden-ranking">Ordenar por</label>
+                <select class="panel-inicio__input" id="selector-orden-ranking">
+                    <option value="puntaje">Puntaje</option>
+                    <option value="fecha">Fecha</option>
+                    <option value="duracion">Duracion</option>
+                    <option value="nivel">Nivel</option>
+                </select>
+            </div>
+            <table class="tabla-ranking">
+                <thead>
+                    <tr>
+                        <th scope="col">Jugador</th>
+                        <th scope="col">Puntaje</th>
+                        <th scope="col">Nivel</th>
+                        <th scope="col">Intentos</th>
+                        <th scope="col">Errores</th>
+                        <th scope="col">Duracion</th>
+                    </tr>
+                </thead>
+                <tbody id="cuerpo-tabla-ranking"></tbody>
+            </table>
+            <div class="modal__acciones">
+                <button class="boton-secundario" id="boton-borrar-ranking" type="button">Borrar historial</button>
+                <button class="boton-principal" id="boton-cerrar-ranking" type="button">Cerrar</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="capa-modal" id="modal-confirmar-borrado">
+        <div class="modal" role="dialog" aria-labelledby="titulo-modal-confirmar-borrado">
+            <h2 class="modal__titulo" id="titulo-modal-confirmar-borrado">Confirmar borrado</h2>
+            <p>Esta accion eliminara todo el historial del ranking y no se puede deshacer.</p>
+            <div class="modal__acciones">
+                <button class="boton-secundario" id="boton-cancelar-borrado" type="button">Cancelar</button>
+                <button class="boton-principal" id="boton-confirmar-borrado" type="button">Borrar</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/validations.js"></script>
+    <script src="js/storage.js"></script>
+    <script src="js/sound.js"></script>
+    <script src="js/game.js"></script>
+    <script src="js/events.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
