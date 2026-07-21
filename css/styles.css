@@ -1,0 +1,525 @@
+/* ==========================================================================
+   styles.css
+   Memotest Mundial 2026 - Banderas
+   Paleta: noche de estadio (fondo azul muy oscuro, cesped, dorado de trofeo).
+   ========================================================================== */
+
+:root {
+    --color-fondo: #0B1D26;
+    --color-panel: #123247;
+    --color-panel-claro: #1B4B63;
+    --color-cesped: #1F7A4D;
+    --color-dorado: #D4AF37;
+    --color-blanco: #F5F7F2;
+    --color-texto-suave: #B8C7D0;
+    --color-error: #C1443D;
+    --color-exito: #2FA86A;
+    --fuente-marcador: "Oswald", "Arial Narrow", sans-serif;
+    --fuente-texto: "Inter", "Segoe UI", sans-serif;
+    --radio-panel: 0.75rem;
+    --sombra-panel: 0 0.5rem 1.5rem rgba(0, 0, 0, 0.45);
+}
+
+[data-tema="claro"] {
+    --color-fondo: #E9EEF1;
+    --color-panel: #FFFFFF;
+    --color-panel-claro: #F1F5F7;
+    --color-texto-suave: #4A5A63;
+    --color-blanco: #12232B;
+}
+
+/* --------------------------------------------------------------------------
+   Elementos base
+   -------------------------------------------------------------------------- */
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background-color: var(--color-fondo);
+    font-family: var(--fuente-texto);
+    color: var(--color-blanco);
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+h1,
+h2,
+h3 {
+    font-family: var(--fuente-marcador);
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+}
+
+button {
+    font-family: var(--fuente-texto);
+}
+
+input {
+    font-family: var(--fuente-texto);
+}
+
+/* --------------------------------------------------------------------------
+   Clases de layout general
+   -------------------------------------------------------------------------- */
+
+.encabezado {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    padding: 1rem 1.5rem;
+    background-color: var(--color-panel);
+    border-bottom: 0.25rem solid var(--color-dorado);
+}
+
+.encabezado__marca {
+    display: flex;
+    align-items: baseline;
+    gap: 0.5rem;
+}
+
+.encabezado__titulo {
+    font-size: 1.4rem;
+    color: var(--color-dorado);
+}
+
+.encabezado__subtitulo {
+    font-size: 0.85rem;
+    color: var(--color-texto-suave);
+}
+
+.navegacion {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.navegacion__enlace {
+    padding: 0.4rem 0.9rem;
+    border: 0.1rem solid var(--color-dorado);
+    border-radius: var(--radio-panel);
+    font-family: var(--fuente-marcador);
+    font-size: 0.85rem;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.navegacion__enlace:hover {
+    background-color: var(--color-dorado);
+    color: var(--color-fondo);
+}
+
+.contenido-principal {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+    width: 100%;
+    max-width: 60rem;
+    margin: 0 auto;
+    padding: 1.5rem;
+}
+
+.pie-pagina {
+    padding: 1rem 1.5rem;
+    background-color: var(--color-panel);
+    text-align: center;
+    font-size: 0.8rem;
+    color: var(--color-texto-suave);
+}
+
+.pie-pagina__enlace {
+    color: var(--color-dorado);
+    text-decoration: underline;
+}
+
+/* --------------------------------------------------------------------------
+   Panel de inicio de partida
+   -------------------------------------------------------------------------- */
+
+.panel-inicio {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+    width: 100%;
+    max-width: 28rem;
+    padding: 2rem;
+    background-color: var(--color-panel);
+    border-radius: var(--radio-panel);
+    box-shadow: var(--sombra-panel);
+}
+
+.panel-inicio__campo {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+}
+
+.panel-inicio__etiqueta {
+    font-size: 0.85rem;
+    color: var(--color-texto-suave);
+}
+
+.panel-inicio__input {
+    padding: 0.65rem 0.8rem;
+    border: 0.1rem solid var(--color-panel-claro);
+    border-radius: 0.5rem;
+    background-color: var(--color-fondo);
+    color: var(--color-blanco);
+    font-size: 1rem;
+}
+
+.panel-inicio__input:focus {
+    outline: 0.15rem solid var(--color-dorado);
+    outline-offset: 0.1rem;
+}
+
+.panel-inicio__niveles {
+    display: flex;
+    gap: 0.6rem;
+    flex-wrap: wrap;
+}
+
+.boton-nivel {
+    flex: 1;
+    padding: 0.7rem 0.5rem;
+    border: 0.15rem solid var(--color-panel-claro);
+    border-radius: 0.5rem;
+    background-color: var(--color-fondo);
+    color: var(--color-texto-suave);
+    font-family: var(--fuente-marcador);
+    font-size: 0.9rem;
+    text-align: center;
+    text-transform: uppercase;
+    transition: border-color 0.2s ease, color 0.2s ease;
+}
+
+.boton-nivel--activo {
+    border-color: var(--color-dorado);
+    color: var(--color-dorado);
+}
+
+.mensaje-error {
+    min-height: 1.2rem;
+    font-size: 0.85rem;
+    color: var(--color-error);
+}
+
+.boton-principal {
+    padding: 0.85rem 1rem;
+    background-color: var(--color-dorado);
+    color: var(--color-fondo);
+    border-radius: 0.5rem;
+    font-family: var(--fuente-marcador);
+    font-size: 1rem;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.boton-principal:hover {
+    box-shadow: 0 0.3rem 0.8rem rgba(212, 175, 55, 0.4);
+    transform: translateY(-0.1rem);
+}
+
+.boton-secundario {
+    padding: 0.6rem 1rem;
+    border: 0.1rem solid var(--color-panel-claro);
+    border-radius: 0.5rem;
+    background-color: transparent;
+    color: var(--color-texto-suave);
+    font-size: 0.85rem;
+    transition: border-color 0.2s ease, color 0.2s ease;
+}
+
+.boton-secundario:hover {
+    border-color: var(--color-dorado);
+    color: var(--color-dorado);
+}
+
+/* --------------------------------------------------------------------------
+   Marcador (HUD del juego)
+   -------------------------------------------------------------------------- */
+
+.marcador {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    width: 100%;
+    padding: 1rem;
+    background-color: var(--color-panel);
+    border-radius: var(--radio-panel);
+    box-shadow: var(--sombra-panel);
+}
+
+.marcador__dato {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-width: 4.5rem;
+}
+
+.marcador__valor {
+    font-family: var(--fuente-marcador);
+    font-size: 1.3rem;
+    color: var(--color-dorado);
+}
+
+.marcador__etiqueta {
+    font-size: 0.7rem;
+    color: var(--color-texto-suave);
+    text-transform: uppercase;
+}
+
+.marcador__acciones {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+}
+
+/* --------------------------------------------------------------------------
+   Tablero y cartas (efecto tablero de estadio / flip)
+   -------------------------------------------------------------------------- */
+
+.tablero {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.6rem;
+    width: 100%;
+    padding: 1rem;
+    background-color: var(--color-cesped);
+    background-image: repeating-linear-gradient(
+        90deg,
+        rgba(255, 255, 255, 0.04) 0,
+        rgba(255, 255, 255, 0.04) 2rem,
+        transparent 2rem,
+        transparent 4rem
+    );
+    border-radius: var(--radio-panel);
+    box-shadow: var(--sombra-panel);
+}
+
+.carta {
+    position: relative;
+    width: 4.5rem;
+    height: 4.5rem;
+    perspective: 62.5rem;
+}
+
+.carta__interior {
+    position: relative;
+    display: flex;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.4s ease;
+    transform-style: preserve-3d;
+}
+
+.carta--volteada .carta__interior {
+    transform: rotateY(180deg);
+}
+
+.carta__cara {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    padding: 0.4rem;
+    background-color: var(--color-panel);
+    border: 0.15rem solid var(--color-panel-claro);
+    border-radius: 0.5rem;
+    backface-visibility: hidden;
+}
+
+.carta__cara--dorso {
+    font-family: var(--fuente-marcador);
+    font-size: 0.75rem;
+    color: var(--color-dorado);
+    text-align: center;
+}
+
+.carta__cara--frente {
+    background-color: var(--color-blanco);
+    transform: rotateY(180deg);
+}
+
+.carta__imagen {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 0.3rem;
+}
+
+.carta--correcta .carta__cara--frente {
+    border-color: var(--color-exito);
+    box-shadow: 0 0 0 0.15rem rgba(47, 168, 106, 0.5);
+}
+
+.carta--incorrecta .carta__cara--frente {
+    border-color: var(--color-error);
+    box-shadow: 0 0 0 0.15rem rgba(193, 68, 61, 0.5);
+}
+
+.carta:focus-visible {
+    outline: 0.15rem solid var(--color-dorado);
+    outline-offset: 0.2rem;
+}
+
+/* --------------------------------------------------------------------------
+   Modales
+   -------------------------------------------------------------------------- */
+
+.capa-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(6, 14, 19, 0.75);
+    z-index: 10;
+}
+
+.capa-modal--visible {
+    display: flex;
+}
+
+.modal {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    width: 90%;
+    max-width: 26rem;
+    max-height: 85vh;
+    padding: 1.75rem;
+    overflow-y: auto;
+    background-color: var(--color-panel);
+    border: 0.15rem solid var(--color-dorado);
+    border-radius: var(--radio-panel);
+    box-shadow: var(--sombra-panel);
+}
+
+.modal__titulo {
+    color: var(--color-dorado);
+    font-size: 1.2rem;
+}
+
+.modal__lista {
+    display: flex;
+    flex-direction: column;
+    gap: 0.35rem;
+    font-size: 0.95rem;
+}
+
+.modal__acciones {
+    display: flex;
+    justify-content: flex-end;
+    gap: 0.75rem;
+    flex-wrap: wrap;
+}
+
+.tabla-ranking {
+    width: 100%;
+    font-size: 0.8rem;
+}
+
+.tabla-ranking th,
+.tabla-ranking td {
+    padding: 0.4rem 0.3rem;
+    text-align: left;
+    border-bottom: 0.05rem solid var(--color-panel-claro);
+}
+
+.tabla-ranking th {
+    color: var(--color-dorado);
+    font-family: var(--fuente-marcador);
+    font-weight: normal;
+    text-transform: uppercase;
+}
+
+/* --------------------------------------------------------------------------
+   Pagina de contacto
+   -------------------------------------------------------------------------- */
+
+.formulario-contacto {
+    display: flex;
+    flex-direction: column;
+    gap: 1.1rem;
+    width: 100%;
+    max-width: 30rem;
+    padding: 2rem;
+    background-color: var(--color-panel);
+    border-radius: var(--radio-panel);
+    box-shadow: var(--sombra-panel);
+}
+
+.formulario-contacto__campo {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+}
+
+.formulario-contacto__textarea {
+    padding: 0.65rem 0.8rem;
+    border: 0.1rem solid var(--color-panel-claro);
+    border-radius: 0.5rem;
+    background-color: var(--color-fondo);
+    color: var(--color-blanco);
+    font-size: 1rem;
+    resize: vertical;
+    min-height: 6rem;
+}
+
+.formulario-contacto__confirmacion {
+    font-size: 0.85rem;
+    color: var(--color-exito);
+}
+
+/* --------------------------------------------------------------------------
+   Utilidades
+   -------------------------------------------------------------------------- */
+
+.oculto {
+    display: none;
+}
+
+.visualmente-oculto {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+}
+
+/* --------------------------------------------------------------------------
+   Media queries
+   -------------------------------------------------------------------------- */
+
+@media (min-width: 30rem) {
+    .carta {
+        width: 5.2rem;
+        height: 5.2rem;
+    }
+}
+
+@media (min-width: 48rem) {
+    .encabezado__titulo {
+        font-size: 1.7rem;
+    }
+
+    .carta {
+        width: 6rem;
+        height: 6rem;
+    }
+}
