@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 200" role="img" aria-label="Bandera de croacia">
+  <rect x="0" y="0.0" width="300" height="66.67" fill="#FF0000"/>
+  <rect x="0" y="66.67" width="300" height="66.67" fill="#FFFFFF"/>
+  <rect x="0" y="133.33" width="300" height="66.67" fill="#171796"/>
+  <g>
+    <rect x="130" y="80" width="12" height="12" fill="#FF0000"/>
+    <rect x="142" y="80" width="12" height="12" fill="#FFFFFF"/>
+    <rect x="154" y="80" width="12" height="12" fill="#FF0000"/>
+    <rect x="166" y="80" width="12" height="12" fill="#FFFFFF"/>
+    <rect x="178" y="80" width="12" height="12" fill="#FF0000"/>
+    <rect x="130" y="92" width="12" height="12" fill="#FFFFFF"/>
+    <rect x="142" y="92" width="12" height="12" fill="#FF0000"/>
+    <rect x="154" y="92" width="12" height="12" fill="#FFFFFF"/>
+    <rect x="166" y="92" width="12" height="12" fill="#FF0000"/>
+    <rect x="178" y="92" width="12" height="12" fill="#FFFFFF"/>
+    <rect x="130" y="104" width="12" height="12" fill="#FF0000"/>
+    <rect x="142" y="104" width="12" height="12" fill="#FFFFFF"/>
+    <rect x="154" y="104" width="12" height="12" fill="#FF0000"/>
+    <rect x="166" y="104" width="12" height="12" fill="#FFFFFF"/>
+    <rect x="178" y="104" width="12" height="12" fill="#FF0000"/>
+    <rect x="130" y="116" width="12" height="12" fill="#FFFFFF"/>
+    <rect x="142" y="116" width="12" height="12" fill="#FF0000"/>
+    <rect x="154" y="116" width="12" height="12" fill="#FFFFFF"/>
+    <rect x="166" y="116" width="12" height="12" fill="#FF0000"/>
+    <rect x="178" y="116" width="12" height="12" fill="#FFFFFF"/>
+    <rect x="130" y="128" width="12" height="12" fill="#FF0000"/>
+    <rect x="142" y="128" width="12" height="12" fill="#FFFFFF"/>
+    <rect x="154" y="128" width="12" height="12" fill="#FF0000"/>
+    <rect x="166" y="128" width="12" height="12" fill="#FFFFFF"/>
+    <rect x="178" y="128" width="12" height="12" fill="#FF0000"/>
+  </g>
+
+</svg>

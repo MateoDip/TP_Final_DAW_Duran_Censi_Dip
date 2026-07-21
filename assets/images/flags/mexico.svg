@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 200" role="img" aria-label="Bandera de mexico">
+  <rect x="0.0" y="0" width="100.0" height="200" fill="#006847"/>
+  <rect x="100.0" y="0" width="100.0" height="200" fill="#FFFFFF"/>
+  <rect x="200.0" y="0" width="100.0" height="200" fill="#CE1126"/>
+  <circle cx="150" cy="100" r="18" fill="#8B5E3C"/>
+
+</svg>

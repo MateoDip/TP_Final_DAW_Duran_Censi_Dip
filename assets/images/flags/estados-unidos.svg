@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 200" role="img" aria-label="Bandera de estados unidos">
+  <rect x="0" y="0.0" width="300" height="28.57" fill="#B22234"/>
+  <rect x="0" y="28.57" width="300" height="28.57" fill="#FFFFFF"/>
+  <rect x="0" y="57.14" width="300" height="28.57" fill="#B22234"/>
+  <rect x="0" y="85.71" width="300" height="28.57" fill="#FFFFFF"/>
+  <rect x="0" y="114.29" width="300" height="28.57" fill="#B22234"/>
+  <rect x="0" y="142.86" width="300" height="28.57" fill="#FFFFFF"/>
+  <rect x="0" y="171.43" width="300" height="28.57" fill="#B22234"/>
+  <rect x="0" y="0" width="130" height="107" fill="#3C3B6E"/>
+  <circle cx="25" cy="25" r="4" fill="#FFFFFF"/>
+  <circle cx="53" cy="25" r="4" fill="#FFFFFF"/>
+  <circle cx="81" cy="25" r="4" fill="#FFFFFF"/>
+  <circle cx="109" cy="25" r="4" fill="#FFFFFF"/>
+  <circle cx="25" cy="53" r="4" fill="#FFFFFF"/>
+  <circle cx="53" cy="53" r="4" fill="#FFFFFF"/>
+  <circle cx="81" cy="53" r="4" fill="#FFFFFF"/>
+  <circle cx="109" cy="53" r="4" fill="#FFFFFF"/>
+  <circle cx="25" cy="81" r="4" fill="#FFFFFF"/>
+  <circle cx="53" cy="81" r="4" fill="#FFFFFF"/>
+  <circle cx="81" cy="81" r="4" fill="#FFFFFF"/>
+  <circle cx="109" cy="81" r="4" fill="#FFFFFF"/>
+
+</svg>

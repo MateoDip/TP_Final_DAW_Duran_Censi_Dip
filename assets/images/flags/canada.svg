@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 200" role="img" aria-label="Bandera de canada">
+  <rect x="0.0" y="0" width="100.0" height="200" fill="#FF0000"/>
+  <rect x="100.0" y="0" width="100.0" height="200" fill="#FFFFFF"/>
+  <rect x="200.0" y="0" width="100.0" height="200" fill="#FF0000"/>
+  <polygon points="150,70 158,90 175,85 165,100 180,110 160,112 162,130 150,118 138,130 140,112 120,110 135,100 125,85 142,90" fill="#FF0000"/>
+
+</svg>
